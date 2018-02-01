@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.4.2 Macallan Duo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	  <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/daterangepicker.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!--[if ie 9]>
+    <link rel="stylesheet" href="css/ie9.css">
+    <![endif]-->
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/classList.min.js"></script>
+    <script src="js/lib/swiper.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/jquery.daterangepicker.min.js"></script>
+  </head>
+  <body>
+    <!-- inject:common/gm_main_menu_2:html -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="gm_top_menu_01 container-fluid hidden-sm hidden-xs">
+        <ul class="navbar-nav list-unstyled">
+            <li class="lh">银河娱乐集团&nbsp;旗下成员：</li>
+            <li><a href="#">澳门星际酒店</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">「 澳门银河 」</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">澳门百老汇</a></li>
+        </ul>
+        <ul class="navbar-nav list-unstyled navbar-right">
+            <li>
+                <div class="wechat-hov">
+                    <span class="galaxyicon galaxyicon-wechat left"></span>微信预订
+                    <div class="code-drop"><img src="images/qr.png"></div>
+                </div>
+            </li>
+            <li><span class="galaxyicon galaxyicon-tel left"></span>853 2888 0888</li>
+            <li><a href="#"><span class="glyphicon glyphicon-map-marker left"></span>如何到达</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span>Language</a>
+                <ul class="dropdown-menu language-menu">
+                    <li><a href="#">简体中文</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid gm_top_menu_03">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <div class="navbar-toggle collapsed">
+                <div class="iconbar-container">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <div class="icon-text">
+                    菜单
+                </div>
+            </div>
+            <a class="navbar-brand" href="homepage.html">
+                <i class="sm"></i>
+                <img src="images/logo.png" class="img-responsive hidden-sm hidden-xs" alt="">
+                <img src="images/mb-logo.jpg" class="img-responsive hidden-md hidden-lg" alt="">
+            </a>
+            <div class="pull-right">
+                <div class="btn-search">
+                    <div><span class="iconi-zoom"></span></div>
+                    <div><span class="iconi-close"></span></div>
+                </div>
+                <div class="btn-order btn-gold hidden-md hidden-lg hidden-xl">
+                    <div>预&nbsp;订</div>
+                    <div>关&nbsp;闭</div>
+                </div>
+            </div>
+            <div class="search-wrap"></div>
+            <div class="mobile-book-wrap">
+                <div class="main-reserve" data-plug-banner="1">
+                    <div class="tabs">
+                        <span class="on">酒店</span>
+                        <span>餐饮</span>
+                        <span>票务</span>
+                    </div>
+                    <div class="contents">
+                        <div>
+                            <div class="content hotel">
+                                <h2>预订酒店</h2>
+                                <h3>选择理想的酒店和入住时间，然后选择心仪的房型</h3>
+                                <div class="clearfix">
+                                    <div class="ctrl-select ctrl-item">
+                                        <div class="ctrl-select-title ctrl-title">全部酒店</div>
+                                        <div class="ctrl-select-list ctrl-list">
+                                            <div class="ctrl-select-item on">
+                                                全部酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item on">
+                                                澳门丽思卡顿酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item">
+                                                澳门JW万豪酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item">
+                                                澳门大仓酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item">
+                                                银河酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ctrl-date ctrl-item">
+                                        <div class="ctrl-date-title ctrl-title" id="ctrl-date">选择日期</div>
+                                    </div>
+                                    <div class="ctrl-person ctrl-child ctrl-item">
+                                        <div class="ctrl-person-title ctrl-title" id="child">2</div>
+                                        <div class="dropdown-menu1 ctrl-list">
+                                            <div class="title">
+                                                <div>
+                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                    <span>成人</span><span id="adult-num2">1</span>
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </div>
+                                                <div>
+                                                    <span class="glyphicon glyphicon-minus"></span>
+                                                    <span>儿童</span>
+                                                    <span id="children-num2">1</span>
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="javascript:;" class="nps-cancel" id="nps-cancel">取消</a>
+                                                <a href="javascript:;" class="nps-confirm">确定</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn-order3">预定</a>
+                                <div class="tab1-inner-content hidden-lg hidden-md">
+                                    <h3><span>通过官网预定可享受</span></h3>
+                                    <ul>
+                                        <li>最优惠房价保证</li>
+                                        <li>优先免费升级房间</li>
+                                        <li>退房时间延至14:00</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content food">
+                                <h2>预订餐厅</h2>
+                                <h3>选择一家餐厅，在特别的日子预订属于你的餐桌</h3>
+                                <div>
+                                    <div class="ctrl-select restaurant ctrl-item">
+                                        <div class="ctrl-select-title ctrl-title">
+                                            选择一家餐厅，在特别的日子预定属于你的餐桌
+                                        </div>
+                                        <div class="ctrl-select-list ctrl-list">
+                                            <div class="ctrl-select-item on">
+                                                澳门丽思卡顿酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item">
+                                                澳门JW万豪酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item">
+                                                澳门大仓酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                            <div class="ctrl-select-item">
+                                                银河酒店
+                                                <span class="icon-square"><span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="btn-order3">预定</a>
+                            </div>
+                            <div class="content ticket">
+                                <h2>预定门票</h2>
+                                <h3 class="hidden-md hidden-sm hidden-xs">在天浪淘园享受阳光和浪花，在UA影院观赏大片，或者欣赏不容错过的百老汇奇幻秀</h3>
+                                <h3 class="hidden-lg">预订各类精彩套票，感受与众不同的身心体验</h3>
+                                <a>天浪淘园全日套票</a>
+                                <a>电影票</a>
+                                <a>百老汇奇幻秀</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav placeholder">
+                <li class="hidden-sm hidden-xs"><a href="#"> a</a></li>
+            </ul>
+            <ul class="nav navbar-nav nav-left">
+                <li class="active hidden-sm hidden-xs"><a href="homepage.html">首页</a></li>
+                <li>
+                    <a href="catchapromotion.html">最新优惠</a>
+                    <!-- <a href="catchapromotion.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-down"></span>最新优惠</a> -->
+                    <!-- <ul class="dropdown-menu">
+                        <li><a href="#">优惠套餐</a></li>
+                        <li><a href="#">独家提供</a></li>
+                    </ul> -->
+                </li>
+                <li class="dropdown">
+                    <a href="wheretostay.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-down"></span><div>酒店住宿</div></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="galaxyhotel.html">银河酒店</a></li>
+                        <li><a href="#">澳门丽思卡尔顿酒店</a></li>
+                        <li><a href="#">澳门悦榕庄</a></li>
+                        <li><a href="#">澳门JW万豪酒店</a></li>
+                        <li><a href="#">澳门大仓酒店</a></li>
+                        <li class="line"></li>
+                        <li><a href="">星际酒店</a></li>
+                        <li><a href="">百老汇酒店</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="whattodo.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-down"></span><div>无限体验</div></a>
+                    <!-- class lists -->
+                    <ul class="dropdown-menu">
+                        <li><a href="dining.html">餐&emsp;&emsp;饮</a></li>
+                        <li><a href="shopping.html">购&emsp;&emsp;物</a></li>
+                        <li><a href="entertainment.html">娱&emsp;&emsp;乐</a></li>
+                        <li><a href="cinema.html">UA银河影院</a></li>
+                        <li><a href="grandresortdeck.html">天浪淘园</a></li>
+                        <li><a href="spamassage.html">SPA与休闲</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav nav-right">
+                <li class="dropdown">
+                    <a href="micepage.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-down"></span><div>会议与活动</div></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="metting.html">会&emsp;&emsp;议</a></li>
+                        <li><a href="wedding.html">婚&emsp;&emsp;宴</a></li>
+                        <li><a href="banquet.html">宴&emsp;&emsp;会</a></li>
+                        <li><a href="privateparty.html">私人派对</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="discover.html">精彩探索</a>
+                    <!-- <ul class="dropdown-menu">
+                        <li><a href="#">发现在澳门</a></li>
+                        <li class="divider hidden-xs hidden-sm"></li>
+                        <li><a href="#">澳门旅游故事</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="#">GEG优越会</a></li>
+                <li class="btn-order btn-gold hidden-xs hidden-sm">
+                    <div class="gold-dropdown">
+                        <a href="#" class="dropdown-toggle gold-toggle" data-toggle="dropdown">
+                            <div><span class="span">预&nbsp;订</span></div>
+                            <div><span class="span">关&nbsp;闭</span></div>
+                        </a>
+                        <div class="dropdown-menu gold">
+                            <div id="bookingbar" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#bookingbar-tab1"><i class="iconi-arrow-build"></i><span>酒店</span></a></li>
+        <li><a data-toggle="tab" href="#bookingbar-tab2"><i class="iconi-dining"></i><span>餐厅</span></a></li>
+        <li><a data-toggle="tab" href="#bookingbar-tab3"><i class="iconi-movie"></i><span>订票</span></a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="bookingbar-tab1" class="tab-pane fade in active">
+            <fieldset class="inner">
+                <div class="hotel-select dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div><span><img src="images/bookingbar-icon1.png" height="18" alt=""></span><span id="select-result" class="result">全部酒店</span><span class="caret"></span></div>
+                    </a>
+                    <ul class="dropdown-menu hp-select">
+                        <li><a href="">银河酒店</a></li>
+                        <li><a href="">澳门丽思卡尔顿酒店</a></li>
+                        <li><a href="">澳门悦榕庄</a></li>
+                        <li><a href="">澳门JW万豪酒店</a></li>
+                        <li><a href="">澳门大仓酒店</a></li>
+                        <li><a href="">全部酒店</a></li>
+                        <li class="line"></li>
+                        <li><a href="">星际酒店</a></li>
+                        <li><a href="">百老汇酒店</a></li>
+                    </ul>
+                </div>
+                <div class="date-select dropdown">
+                    <div><span><img src="images/bookingbar-icon2.png" height="18" alt=""></span><span class="result" id="date2">2017年09月20日 - 2017年09月21日</span><span class="caret" id="input_trigger11"></span></div>
+                </div>
+                <div id="datepicker"></div>
+                <div class="number-people-select dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <div class="result">
+                            <span class="iconi-people"></span>&nbsp;
+                            <span class="select-result3">2</span>人
+                            <span class="select-result4">1</span>&nbsp;房间
+                            <span class="caret"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu1 dropdown-menu">
+                        <div class="title">
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="room-num">1</span><span>房间</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="adult-num">1</span><span>成人</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                            <div>
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="children-num">1</span><span>儿童</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn-order btn-gold">立即预订</a>
+            </fieldset>
+            <div class="tab1-inner-content">
+                <h3><span>通过官网预定可享受</span></h3>
+                <ul>
+                    <li>最优惠房价保证</li>
+                    <li>优先免费升级房间</li>
+                    <li>退房时间延至14:00</li>
+                </ul>
+            </div>
+        </div>
+        <div id="bookingbar-tab2" class="tab-pane fade">
+            <fieldset class="inner">
+                <div class="hotel-select dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div>
+                            <span class="iconi-dining"></span>
+                            <span class="result hidden-md hidden-sm hidden-xs">选择一家餐厅，在特别的日子预订属于你的餐桌</span>
+                            <span class="result hidden-lg">选择一家餐厅</span>
+                            <span class="caret"></span></div>
+                    </a>
+                    <ul id="selectable" class="dropdown-menu hp-select">
+                        <li class=""><a href="#">澳门丽思卡尔顿酒店</a></li>
+                        <li class=""><a href="#">澳门JW万豪酒店</a></li>
+                        <li class=""><a href="#">澳门大仓酒店</a></li>
+                        <li class=""><a href="#">银河酒店</a></li>
+                    </ul>
+                </div>
+                <a class="btn" href="">立即预订</a>
+            </fieldset>
+        </div>
+        <div id="bookingbar-tab3" class="tab-pane fade">
+            <fieldset class="inner">
+                <div class="title_out">预订各类精彩套票，感受与众不同的身心体验。</div>
+                <a href="" class="btn">天浪淘园全日套票</a>
+                <a href="" class="btn">电影票</a>
+                <a href="" class="btn">百老汇奇幻秀</a>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="btn-search hidden-xs hidden-sm">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <div><i class="iconi-zoom"></i></div>
+                        <div><i class="iconi-close"></i></div>
+                    </a>
+                    <div class="dropdown-menu search">
+                        <div class="search-main">
+                            <div class="input-group">
+                                <span class="input-group-addon iconi-zoom"></span>
+                                <input type="search" class="form-control">
+                            </div>
+                            <div class="search-content">
+                                <p>更多精彩内容，欢迎了解：</p>
+                                <ul>
+                                    <li><a href="">澳门百老汇</a></li>
+                                    <li><a href="">澳门JW万豪酒店</a></li>
+                                    <li><a href="">澳门丽思卡尔顿</a></li>
+                                    <li><a href="">红伶</a></li>
+                                    <li><a href="">百老汇奇幻秀</a></li>
+                                </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <div class="mobile-language row">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span> Language</a>
+            <div class="ml-slect">
+                <select>
+                    <option value=""><a href="#">简体中文</a></option>
+                    <option value=""><a href="#">English</a></option>
+                    <option value=""><a href="#">繁體中文</a></option>
+                </select>   
+            </div>
+        </div>
+        <!-- mobile collapse modal -->
+        <div class="collapse-modal"></div>
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<script src="js/gm_main_menu.js" charset="utf-8"></script>
+<!--
+JQuery animations are incompatible with other CSS3 animations
+<script type="text/javascript">
+      $(window).scroll(function()
+      { 
+          var hft_menu_1 = $(".navbar.navbar-default").height();
+          var scrl_size = $(window).scrollTop();
+
+          if(hft_menu_1<scrl_size)
+          {
+           $(".gm_top_menu_01").slideUp(200);
+       
+          }
+          else
+          {
+            $(".gm_top_menu_01").slideDown(200);
+           
+          }
+      });
+</script>
+-->
+
+    <!-- endinject -->
+    <!-- inject:macallanduo/hp_hero_slideshow_09:html -->
+    <div class="head-nav2">
+    <div class="hn-head">
+        <a>麦卡伦双声</a>
+        <span class="galaxyicon-down "></span>
+    </div>
+    <ul class="hn-con">
+        <li><a href="">银河酒店</a></li>
+        <li><a href="">丽思卡尔顿酒店</a></li>
+    </ul>
+</div>
+<div id="hp_hero_slideshow_09" class="swiper-container no-bookingbar half-hero-slideshow">
+    <div class="swiper-wrapper text-center">
+        <div class="swiper-slide swiper-no-swiping">
+            <img class="slide-bg" src="images/macallanduo_hero_slide_1.png">
+            <div class="slide-box">
+                <h1><span>一品威士忌&nbsp;</span>一醉双声曲</h1>
+                <h2>苏格兰地道威士忌吧 每晚双声动人演绎</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/hp_hero_slideshow_09.js" charset="utf-8"></script>
+
+    <!-- endinject -->
+    <div class="main-content">
+      <!-- inject:macallanduo/macallanduo_detail:html -->
+      <div id="macallanduo_detail" class="container">
+    <div class="macallanduo_detail_share hidden-sm hidden-xs">
+        分享：<a href="" class="wechat-hov"><i class="iconi-logo-wechat"></i><div class="code-drop"><img src="images/qr.png"></div></a><a href=""><i class="iconi-logo-sina"></i></a>
+    </div>
+    <div class="row">
+        <div class="col-my-3 visible-lg visible-md"><img src="images/macallanduo_detail_1.png"></div>
+        <div class="col-my-7">
+            <div class="macallanduo_detail_text">
+                <div class="macallanduo_detail_top">
+                  <div class="hidden-lg hidden-md"><img src="images/macallanduo_detail_1.png"></div>
+                  <h3>麦卡伦双声</h3>
+                </div>
+                <p>麦卡伦威士忌吧是第一、也是唯一一间以酿酒家麦卡伦为主题的高级威士忌酒吧，珍藏超过400种顶级麦芽 威士忌，甚至连麦卡伦自家酒厂出品的稀世佳酿亦可提供，可说是威士忌的天堂。酒吧为配合威士忌的独特 风味，特意以苏格兰的豪华家居作主题，处处可见散发浓厚传统苏格兰风格的家具装饰，包括橡木地板、真 皮沙发和大花地毡等，加上壁炉和鹿角水晶吊灯发放出的柔和光线，旁边洋溢暖意的火炉，以及放置大量珍 藏威士忌的玻璃柜，令人恍如走在苏格兰中最地道的威士忌酒吧，风味十足。
+                </p>
+                <p>
+                    著名歌手Crystal同拍档Jack于麦卡伦威士忌吧作驻场表演，献唱多首扣人心弦的经典名曲。Crystal拥有一 把甜美的声线，且现场演唱经验十足。如此实力派阵容，不容错过！
+                </p>
+            </div>
+            <div class="macallanduo_detail_text macallanduo_detail_line">
+              <div>
+                <span><i class="position-ico glyphicon glyphicon-time"></i>演出时间：</span>
+                <p>星期一至四：晚上9时至凌晨12时40分；星期五及六：晚上9时至凌晨1时40分</p>
+              </div>
+              <div>
+                <span><i class="glyphicon glyphicon-sunglasses"></i>服&emsp;&emsp;饰：</span>
+                <p>女士 ─ 时尚便服；男士 ─ 时尚便服，禁止穿着拖鞋、短裤及无袖衬衫人士入场；禁止未满十八
+               岁的人士进入</p>
+              </div>
+              <div>
+                <span><i class="position-ico glyphicon glyphicon-map-marker"></i>位置：</span>
+                <p>麦卡伦威士忌吧－「银河酒店」2楼，203</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <!-- endinject -->
+      <!-- inject:macallanduo/macallanduo_taste:html -->
+      <section id="macallanduo_taste" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>品味麦卡伦</span></h3>
+        </div>
+    </div>
+    <div class="container-fiuld">
+        <div class="row">
+            <div class="left-feild col-xs-12 col-lg-6">
+                <img class="left-feild-img" src="images/macallanduo_taste_1.png" alt="">
+            </div>
+            <div class="right-feild col-xs-12 col-lg-6 ">
+                <div class="detail">
+                    <div class="inner">
+                        <h4 class="h3-title">顶级威士忌</h4>
+                        <p>
+                            全亚洲首间以酿酒家麦卡伦为主题的高级威士忌酒吧，藏有超过400种顶级麦芽威士忌，包括麦卡伦自家酒厂出品的限定佳酿。琥珀色的威士忌入口醇厚丰富，吸引万千钟爱。酒人至此，翻看侍应送上的酒单以及一本包含麦卡伦威士忌历史与经典威士忌的酒单，品味着年份众多的顶级威士忌，一定会感到大喜。除了威士忌以外，亦备有多款酒精类饮品如香槟、红酒、白酒等供不同口味的客人需要，绝不会令人感觉沉闷。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left-feild col-xs-12 col-lg-6 pull-right">
+                <img class="left-feild-img" src="images/macallanduo_taste_2.png" alt="">
+            </div>
+            <div class="right-feild col-xs-12 col-lg-6  pull-left">
+                <div class="detail">
+                    <div class="inner">
+                        <h4 class="h3-title">苏格兰风情</h4>
+                        <p>
+                            为配合威士忌的风味，酒吧以苏格兰风格的家具装饰和佈置，洋溢著浓厚的传统异域乡村情怀。苏格兰地道风味在目之所及之处精彩毕现。当你进门后，马上由操流利英语的侍应引路，一路领略细致入微的陈设布置，如同在下雪的寒冬置身苏格兰的温暖家中，大到一件家私，小到窗帘或摆设，台灯与书籍，款式与颜色配撘均尽显心思。让客人彻底进入一个由橡木地板、古老家俱，英式真皮沙发及大花地毯构成的英伦空间，在壁炉的火光中以及水晶吊灯的隐隐光晕间着迷沉醉。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="left-feild col-xs-12 col-lg-6">
+            <img class="left-feild-img" src="images/macallanduo_taste_3.png" alt="">
+        </div>
+        <div class="right-feild col-xs-12 col-lg-6 ">
+            <div class="detail">
+                <div class="inner">
+                    <h4 class="h3-title">醉美双声</h4>
+                    <p>
+                        银河酒店二楼的麦卡伦威士忌吧歌手Crystal和搭档Jack的驻唱表演，被誉为麦卡伦双声。他们悉心演绎世界经典名曲。在偌大的澳门银河综合度假城，当你来到麦卡伦威士忌吧，伴着经典的歌声、情调、柔光，被陶醉的音乐环绕，感受时空转换的魅力和无限的舒缓与放松。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+      <!-- endinject -->
+      <!-- inject:galaxyhotel/hotel_advertisement:html -->
+      <div id="hotel_advertisement" class="container">
+	<div class="hotel_advertisement-main">
+		<h4 class="hotel_advertisement-main__header">银娱优越会</h4>
+		<p class="hotel_advertisement-main__describe">出示银娱优越会会员卡，尊享高折扣的餐饮优惠</p>
+	</div>
+	<a href="" class="btn btn-info">了解详情</a>
+</div>
+      <!-- endinject -->
+      <!-- inject:macallanduo/macallanduo_courtesy:html -->
+      <section id="macallanduo_courtesy" class="container">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+            <h3><span>尊享礼遇</span></h3>
+        </div>
+    </div>
+    <div class="swiper-container-wrapper container">
+        <div class="container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img"><img class="img-responsive" src="images/macallanduo_courtesy_1.png" alt=""></div>
+                    <div class="caption">
+                        <h4>麦卡伦威士忌吧 - 您的年龄独享优惠</h4>
+                        <p>出示您的有效身份证明文件，即享岁数折扣优惠。</p>
+                        <a href="#">了解更多<span class="iconi-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img class="img-responsive" src="images/macallanduo_courtesy_2.png" alt=""></div>
+                    <div class="caption">
+                        <h4>麦卡伦威士忌吧 – 雪茄威士忌之夜</h4>
+                        <p>邀你来麦卡伦参加以各式威士忌配雪茄的醉人夜晚。</p>
+                        <a href="#">了解更多<span class="iconi-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img class="img-responsive" src="images/macallanduo_courtesy_3.png" alt=""></div>
+                    <div class="caption">
+                        <h4>麦卡伦威士忌吧 – 威士忌文化体验</h4>
+                        <p>领略苏格兰威士忌的精髓，与你一起深度探究威士忌的醇厚之味。</p>
+                        <a href="#">了解更多<span class="iconi-arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left control text-center">
+            <span class="galaxyicon-left icon-arrow-left"></span>
+        </div>
+        <div class="right control text-center">
+            <span class="galaxyicon-right icon-arrow-right"></span>
+        </div>
+    </div>
+</section>
+<script src="js/macallanduo_courtesy.js" charset="utf-8"></script>
+
+      <!-- endinject -->
+      <!-- inject:macallanduo/macallanduo_recommend:html -->
+      <section id="macallanduo_recommend">
+    <div class="container">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-lg-offset-2 col-md-offset-1">
+            <h3><span>精彩推荐</span></h3>
+        </div>
+    </div>
+    <div class="swiper-container-wrapper container">
+        <div class="container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img"><img class="img-responsive" src="images/macallanduo_recommend_1.png"></div>
+                    <div class="caption">
+                        <h4>红伶</h4>
+                        <p>完美揉合当代艺术、设计及时尚，重回1930年上海流金岁月。</p>
+                        <div class="innner-desc">
+                            <div class="show-time text-left">
+                                <span class="show-name">
+                                  <span class="position-ico glyphicon glyphicon-time"></span>
+                                演出时间：</span>
+                                <p class="show-info">星期日、星期二至四：晚上9时至凌晨2时</p>
+                            </div>
+                            <div class="show-time text-left">
+                                <span class="show-name">
+                                <span class="position-ico glyphicon glyphicon-map-marker"></span>
+                                所在位置：</span>
+                                <p class="show-info">贝隆餐厅，悦榕庄酒店31楼</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img class="img-responsive" src="images/macallanduo_recommend_2.png"></div>
+                    <div class="caption">
+                        <h4>丽思酒廊</h4>
+                        <p>全天候高贵酒廊，无论是精雕细琢的特定下午茶或独一无二的鸡尾酒，都会为宾客一一预备</p>
+                        <div class="innner-desc">
+                            <div class="show-time text-left">
+                                <span class="show-name">
+                                  <span class="position-ico glyphicon glyphicon-time"></span>
+                                营业时间：</span>
+                                <p class="show-info">星期日至星期四：中午12时至凌晨1时</p>
+                            </div>
+                            <div class="show-time text-left">
+                                <span class="show-name">
+                                <span class="position-ico glyphicon glyphicon-map-marker"></span>
+                                所在位置：</span>
+                                <p class="show-info">澳门丽思卡尔顿酒店51楼</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img class="img-responsive" src="images/macallanduo_recommend_3.png"></div>
+                    <div class="caption">
+                        <h4>贝隆醇音</h4>
+                        <p>在如同置身海底世界的装潢中，品尝海味十足的菜肴，欣赏水晶剔透的钢琴奏出的醇美之音。</p>
+                        <div class="innner-desc">
+                            <div class="show-time text-left">
+                                <span class="show-name">
+                                  <span class="position-ico glyphicon glyphicon-time"></span>
+                                营业时间：</span>
+                                <p class="show-info">每天下午7时至晚上11时 (星期二休息)</p>
+                            </div>
+                            <div class="show-time text-left">
+                                <span class="show-name">
+                                <span class="position-ico glyphicon glyphicon-map-marker"></span>
+                                所在位置：</span>
+                                <p class="show-info">贝隆餐厅，悦榕庄酒店31楼</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left control text-center">
+            <span class="galaxyicon-left icon-arrow-left"></span>
+        </div>
+        <div class="right control text-center">
+            <span class="galaxyicon-right icon-arrow-right"></span>
+        </div>
+    </div>
+</section>
+<script src="js/macallanduo_recommend.js" charset="utf-8"></script>
+
+      <!-- endinject -->
+      <!-- inject:common/gm_footer_section:html -->
+      <footer id="gm_footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-xl-10 col-xl-offset-1">
+                <div class="gm_footer_top">
+                    <a><img src="images/top.png" alt=""></a>
+                </div>
+                <!-- <div class="gm_footer_crumbs">
+                    <a href="">主页</a><i>/</i>
+                    <a href="">食味行乐</a><i>/</i>
+                    <a href="">购物</a><i>/</i>
+                    <span>独家系列</span>
+                </div> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 col-lg-3">
+                        <div class="footer_links">
+                            <h5>快捷预订 <span class="iconi-right hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">预订酒店</a></li>
+                                <li><a href="">预订餐厅</a></li>
+                                <li><a href="">预订影票</a></li>
+                                <li><a href="">预订天浪淘园全日通</a></li>
+                                <li><a href="">预订《百老汇奇幻秀》</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>无限体验 <span class="iconi-right hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">最新优惠</a></li>
+                                <li><a href="">酒店住宿</a></li>
+                                <li><a href="">餐&emsp;&emsp;饮</a></li>
+                                <li><a href="">购&emsp;&emsp;物</a></li>
+                                <li><a href="">娱&emsp;&emsp;乐</a></li>
+                                <li><a href="">天浪淘园</a></li>
+                                <li><a href="">SPA与休闲</a></li>
+                                <li><a href="">会议与活动</a></li>
+                                <li><a href="">精彩探索</a></li>
+                                <li><a href="">GEG优越会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>集团介绍 <span class="iconi-right hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">澳门银河介绍</a></li>
+                                <li><a href="">关于我们</a></li>
+                                <li><a href="">联系我们</a></li>
+                                <li><a href="">奖项荣誉</a></li>
+                                <li><a href="">新闻中心</a></li>
+                                <li><a href="">我的银河事业</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_links">
+                            <h5>集团其他成员 <span class="iconi-right hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">澳门星际酒店</a></li>
+                                <li><a href="">澳门百老汇</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-2 col-lg-2">
+                        <div class="footer_links">
+                            <h5>实用信息 <span class="iconi-right hidden-md hidden-lg"></span></h5>
+                            <ul class="footer_dropdown">
+                                <li><a href="">交通指南</a></li>
+                                <li><a href="">泊&emsp;&emsp;车</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3 col-lg-3 moreicons">
+                        <h5>关注我们</h5>
+                        <div class="chat">
+                            <a class="wechat-hov">
+                                <i class="iconi-logo-wechat"></i>
+                                <div class="code-drop"><img src="images/qr.png"></div>
+                            </a>
+                            <a><i class="iconi-logo-sina"></i></a>
+                            <a><i class="iconi-logo-youku"></i></a>
+                            <a>
+                                <span class="iconi-logo-owl">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="subscribe">
+                            <h5 class="title">
+                                订阅「爱赏」，尊享网上优惠
+                            </h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请输入你的邮箱地址">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button">订&emsp;阅</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="address">
+                                <span class="glyphicon glyphicon-map-marker left"></span> 地址：澳门路氹城「澳门银河」综合度假城
+                            </div>
+                            <div class="dropdown language">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="iconi-globe left"></span> Language</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">简体中文</a></li>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">繁體中文</a></li>
+                                </ul>
+                                <select class="language-select hidden-lg hidden-md hidden-sm">
+                                    <option value="">简体中文</option>
+                                    <option value="">English</option>
+                                    <option value="">繁體中文</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block qr">
+                    <ul>
+                        <li class="galaxyicon-front galaxyicon-tel">预订专线：<a href="tel:85328880888">853 2888 0888</a></li>
+                        <li class="galaxyicon-front galaxyicon-wechat">微信预订</li>
+                        <li class="qr-img"><img src="images/qr.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="row logos">
+                    <div class="col-xs-12 col-md-2 col-lg-2 logo-left text-right">
+                        <span><img src="images/220X166.svg" alt=""></span>
+                    </div>
+                    <div class="col-xs-12 col-md-10 col-lg-10 _img">
+                        <ul class="list-inline li1">
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo1.svg" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo2.svg" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo3.svg" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo4.svg" alt=""></a>
+                            </li>
+                            <li class="item second-line">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo5.svg" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo6.svg" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo7.svg" alt=""></a>
+                            </li>
+                            <li class="item">
+                                <a href="#"><img class="img-responsive center-block" src="images/logo8.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="list-inline text-center">
+                    <li><a href="">网站地图</a></li>
+                    <li><a href="">隐私政策</a></li>
+                    <li><a href="">使用条款</a></li>
+                    <li><a href="">提防伪冒网站行骗及电话诈骗</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        <p>© 2011 - 2017 中国澳门特别行政区注册企业：新银河娱乐有限公司，保留所有权利。</p>
+    </div>
+    <!-- <img src="images/6footer.png" alt=""> -->
+</footer>
+<script src="js/gm_footer_section.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    footer_links();
+    $(".footer_links h5").click(function() {
+        var win_wid = $(window).width();
+        if (win_wid < 992) {
+            if ($(this).hasClass("clicked_h5")) {
+                $(".footer_dropdown").slideUp();
+                $(".footer_links h5").removeClass("clicked_h5");
+            } else {
+                $(".footer_dropdown").slideUp();
+                $(".footer_links h5").removeClass("clicked_h5");
+                $(this).parent().find(".footer_dropdown").slideDown();
+                $(this).addClass("clicked_h5");
+            }
+        }
+
+
+    });
+});
+
+$(window).resize(function() {
+    footer_links();
+});
+
+function footer_links() {
+
+    var win_wid = $(window).width();
+
+    if (win_wid < 992) {
+        $(".footer_dropdown").slideUp();
+
+    } else {
+        $(".footer_dropdown").slideDown();
+    }
+
+
+}
+</script>
+
+      <!-- endinject -->
+    </div>
+  </body>
+</html>
